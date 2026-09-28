@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090b17">
+  <meta name="description" content="زوزا × حمودي — Couple Challenge لعبة تحديات لشخصين">
+  <title>زوزا × حمودي | Couple Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <main id="app" class="app-shell">
+    <section id="menu-screen" class="screen active">
+      <header class="topbar"><div class="brand-mini"><span class="brand-mark">HZ</span><span>COUPLE<br><b>CHALLENGE</b></span></div><button class="icon-btn" data-action="sound" aria-label="الصوت"><svg viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6l-5 4H4Zm13.5-1.5a5 5 0 0 1 0 7M17 5.5a9 9 0 0 1 0 13"/></svg><span id="sound-label">ON</span></button></header>
+      <div class="hero-grid">
+        <div class="hero-copy"><p class="eyebrow">لعبة حب ومنافسة</p><h1>زوزا <span>×</span> حمودي</h1><p class="hero-sub">مين فيكم هيخطف اللقب؟<br><strong>اللعب بدأ يا أبطال.</strong></p><div class="hero-actions"><button class="btn btn-primary" data-action="start"><span>ابدأ اللعب</span><i>→</i></button><button class="btn btn-ghost" data-action="howto"><span>طريقة اللعب</span><i>?</i></button></div><div class="trust-row"><span class="pulse-dot"></span> 15 تحدي مختلف <span class="divider"></span> من غير نت</div></div>
+        <div class="versus-card"><div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="player player-h"><div class="avatar avatar-pink">ح</div><span>حمودي</span><small>THE BOLD ONE</small></div><div class="vs">VS</div><div class="player player-z"><div class="avatar avatar-blue">ز</div><span>زوزا</span><small>THE QUICK ONE</small></div><div class="card-glow"></div></div>
+      </div>
+      <div class="menu-footer"><span>جاهزين للضحك؟</span><span>H <b>♡</b> Z</span><span>v1.0 / STATIC EDITION</span></div>
+    </section>
+
+    <section id="howto-screen" class="screen"><div class="panel narrow"><button class="back-btn" data-action="menu">← القائمة</button><p class="eyebrow">قبل ما نبدأ</p><h2>اللعبة سهلة…<br><span>بس الكسب مش سهل.</span></h2><div class="how-grid"><div class="how-item"><b>01</b><strong>اختاروا الجولة</strong><p>15 تحدي سريع، وكل تحدي له طريقته الخاصة.</p></div><div class="how-item"><b>02</b><strong>اضغطوا بسرعة</strong><p>كل ضغطة صح ممكن تقلب النتيجة.</p></div><div class="how-item"><b>03</b><strong>خدوا النقاط</strong><p>النقاط بتتجمع لحد معركة النهاية.</p></div></div><button class="btn btn-primary full" data-action="start">جاهزين؟ يلاااا <i>→</i></button></div></section>
+
+    <section id="setup-screen" class="screen"><div class="panel setup-panel"><button class="back-btn" data-action="menu">← رجوع</button><div class="setup-head"><p class="eyebrow">الاستعداد</p><h2>جاهزين يا <span>حمودي وزوزا؟</span></h2><p>كل واحد يمسك ناحية الشاشة… ونشوف مين أسرع.</p></div><div class="setup-vs"><div class="setup-player pink"><div class="avatar">ح</div><strong>حمودي</strong><small>PLAYER 01</small></div><div class="setup-badge">H<br><span>×</span><br>Z</div><div class="setup-player blue"><div class="avatar">ز</div><strong>زوزا</strong><small>PLAYER 02</small></div></div><button class="btn btn-primary full" data-action="countdown">ابدأ التحدي <i>→</i></button></div></section>
+
+    <section id="countdown-screen" class="screen"><div class="count-wrap"><p class="eyebrow">التحدي الأول على الأبواب</p><div id="count-number">3</div><h2 id="count-caption">جهزوا صوابعكم!</h2><div class="count-ring"></div></div></section>
+
+    <section id="game-screen" class="screen"><header class="gamebar"><button class="icon-btn" data-action="pause" aria-label="إيقاف مؤقت"><svg viewBox="0 0 24 24"><path d="M7 5v14M17 5v14"/></svg></button><div class="round-label"><span id="round-number">التحدي 01</span><small id="round-kicker">أسرع واحد</small></div><button class="icon-btn" data-action="sound" aria-label="الصوت"><svg viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6l-5 4H4Zm13.5-1.5a5 5 0 0 1 0 7M17 5.5a9 9 0 0 1 0 13"/></svg><span id="game-sound-label">ON</span></button></header><div class="scoreboard"><div class="score-card score-h"><div><span class="score-name">حمودي</span><small>H</small></div><strong id="score-h">0</strong></div><div class="score-progress"><div class="progress-fill" id="overall-progress"></div></div><div class="score-card score-z"><div><span class="score-name">زوزا</span><small>Z</small></div><strong id="score-z">0</strong></div></div><div class="challenge-shell"><div class="challenge-head"><span class="challenge-tag" id="challenge-tag">REACTION</span><h1 id="challenge-title">أسرع واحد</h1><p id="challenge-instruction">استنى الإشارة… أول واحد يدوس يكسب!</p></div><div id="challenge-area" class="challenge-area"></div><div class="timer-row"><span id="timer-text">جاهز؟</span><div class="timer-track"><div id="timer-fill"></div></div><span id="timer-value">—</span></div></div></section>
+
+    <section id="result-screen" class="screen"><div class="panel result-panel"><p class="eyebrow">نتيجة الجولة</p><div class="result-medal" id="result-medal">H</div><h2 id="result-title">حمودي كسب الجولة!</h2><p id="result-subtitle">يا سلام يا نجم… النقطة راحت لك.</p><div class="result-points" id="result-points">+1</div><div class="result-scores"><div><span>حمودي</span><strong id="result-h">0</strong></div><div><span>زوزا</span><strong id="result-z">0</strong></div></div><button class="btn btn-primary full" data-action="next">التحدي التالي <i>→</i></button><button class="text-btn" data-action="quit">الخروج للقائمة</button></div></section>
+
+    <section id="final-screen" class="screen"><div class="panel final-panel"><div class="final-top"><p class="eyebrow">THE REAL WINNER IS H <span>♡</span> Z</p><div class="crown">★</div><h1 id="final-title">حمودي كسب!</h1><p id="final-subtitle">بس الحب كسبان دايمًا.</p></div><div class="final-score-grid"><div class="final-score pink"><span>حمودي</span><strong id="final-h">0</strong><small>نقطة</small></div><div class="final-score blue"><span>زوزا</span><strong id="final-z">0</strong><small>نقطة</small></div></div><div class="stats-grid"><div><span>جولات حمودي</span><b id="wins-h">0</b></div><div><span>جولات زوزا</span><b id="wins-z">0</b></div><div><span>أفضل تحدي</span><b id="best-challenge">—</b></div><div><span>أعلى كومبو</span><b id="best-combo">0</b></div></div><div class="final-actions"><button class="btn btn-primary" data-action="replay">العب تاني <i>↻</i></button><button class="btn btn-ghost" data-action="menu">العودة للقائمة</button></div></div></section>
+
+    <div id="pause-modal" class="modal hidden"><div class="modal-card"><div class="pause-icon">Ⅱ</div><p class="eyebrow">استراحة صغيرة</p><h2>اللعبة متوقفة</h2><p>خدوا نفس… وبعدين نكمل المنافسة.</p><button class="btn btn-primary full" data-action="resume">كمّل اللعب</button><button class="text-btn" data-action="quit">الخروج للقائمة</button></div></div>
+    <div id="toast" class="toast" role="status"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
